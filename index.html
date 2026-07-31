@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <h1>Currency Converter</h1>
+        <p class="subtitle">
+            Get accurate live exchange rates instantly.
+        </p>
+
+        <form>
+
+            <div class="input-box">
+                <label>Amount</label>
+                <input
+                    type="number"
+                    id="amount"
+                    placeholder="Enter amount"
+                    min="0"
+                    step="any"
+                >
+            </div>
+
+            <div class="currency-row">
+
+                <div class="currency-box">
+                    <label>From</label>
+
+                    <select id="fromCurrency">
+
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="NGN">NGN - Nigerian Naira</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="CAD">CAD - Canadian Dollar</option>
+                        <option value="AUD">AUD - Australian Dollar</option>
+                        <option value="JPY">JPY - Japanese Yen</option>
+                        <option value="CNY">CNY - Chinese Yuan</option>
+                        <option value="INR">INR - Indian Rupee</option>
+                        <option value="ZAR">ZAR - South African Rand</option>
+
+                    </select>
+
+                </div>
+
+                <button type="button" id="swapBtn" class="swap-btn">
+                    <i class="fa-solid fa-right-left"></i>
+                </button>
+
+                <div class="currency-box">
+                    <label>To</label>
+
+                    <select id="toCurrency">
+
+                        <option value="NGN">NGN - Nigerian Naira</option>
+                        <option value="USD">USD - US Dollar</option>
+                        <option value="EUR">EUR - Euro</option>
+                        <option value="GBP">GBP - British Pound</option>
+                        <option value="CAD">CAD - Canadian Dollar</option>
+                        <option value="AUD">AUD - Australian Dollar</option>
+                        <option value="JPY">JPY - Japanese Yen</option>
+                        <option value="CNY">CNY - Chinese Yuan</option>
+                        <option value="INR">INR - Indian Rupee</option>
+                        <option value="ZAR">ZAR - South African Rand</option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+            <button type="submit" id="convertBtn" class="convert-btn">
+                Convert Currency
+            </button>
+
+        </form>
+
+        <div class="result-card">
+
+            <h2>Converted Amount</h2>
+
+            <div class="result">
+                0.00
+            </div>
+
+            <div class="rate" id="exchangeRate">
+                Live exchange rate will appear here.
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
